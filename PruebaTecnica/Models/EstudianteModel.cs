@@ -1,13 +1,13 @@
 ﻿namespace PruebaTecnica.Models
 {
-    public class EstudiantesModel:RegistroModel
+    public class EstudianteModel:RegistroModel
     {
         public int Id { get; set; }
         public string Nombre { get; set; } = string.Empty;
         public string Apellido { get; set; } = string.Empty;
         public DateTime FechaNacimiento { get; set; }
         // Relaciones
-        public List<ProfesorAlumnoModel> ProfesorAlumnos { get; set; } = new List<ProfesorAlumnoModel>();
-        public List<AlumnoEscuelaModel> AlumnoEscuelas { get; set; } = new List<AlumnoEscuelaModel>();
+        public IEnumerable<ProfesorAlumnoModel> ProfesorAlumnos { get; set; }
+        public IEnumerable<AlumnoEscuelaModel> AlumnoEscuelas { get; set; }
     }
 }

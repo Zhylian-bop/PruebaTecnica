@@ -6,8 +6,7 @@
         public string Nombre { get; set; } = string.Empty;
         public string Descripcion { get; set; } = string.Empty;
         // Relaciones
-        public List<ProfesorAlumnoModel> ProfesorAlumnos { get; set; } = new List<ProfesorAlumnoModel>();
-        public List<AlumnoEscuelaModel> AlumnoEscuelas { get; set; } = new List<AlumnoEscuelaModel>();
-        public List<ProfesoresModel> Profesores { get; set; } = new List<ProfesoresModel>();
+        public IEnumerable<AlumnoEscuelaModel> AlumnoEscuelas { get; set; }
+        public IEnumerable<ProfesoresModel> Profesores { get; set; }
     }
 }
