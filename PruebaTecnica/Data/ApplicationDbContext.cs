@@ -8,9 +8,9 @@ namespace PruebaTecnica.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
             public DbSet<EscuelaModel> Escuelas { get; set; }
-            public DbSet<ProfesoresModel> Profesores { get; set; }
+            public DbSet<ProfesorModel> Profesores { get; set; }
             public DbSet<EstudianteModel> Estudiantes { get; set; }
-            public DbSet<AlumnoEscuelaModel> AlumnoEscuelas { get; set; }
-            public DbSet<ProfesorAlumnoModel> ProfesorAlumnos { get; set; }
+            public DbSet<EstudianteEscuelaModel> EstudianteEscuelas { get; set; }
+            public DbSet<ProfesorEstudianteModel> ProfesorEstudiante { get; set; }
     }
 }

@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using PruebaTecnica.Data;
+using PruebaTecnica.Profiles;
+using PruebaTecnica.Services.Interfaces;
+using PruebaTecnica.Services.Servicios;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +15,13 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddAutoMapper(typeof(MapeoProfile));
+builder.Services.AddScoped<IEscuelaService, EscuelaService>();
+builder.Services.AddScoped<IEstudianteService, EstudianteService>();
+builder.Services.AddScoped<IProfesorService, ProfesorService>();
+builder.Services.AddScoped<IEstudianteEscuelaService, EstudianteEscuelaService>();
+builder.Services.AddScoped<IProfesorEstudianteService, ProfesorEstudianteService>();
 
 var app = builder.Build();
 
