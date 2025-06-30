@@ -10,7 +10,7 @@ namespace PruebaTecnica.Data
             public DbSet<EscuelaModel> Escuelas { get; set; }
             public DbSet<ProfesorModel> Profesores { get; set; }
             public DbSet<EstudianteModel> Estudiantes { get; set; }
-            public DbSet<EstudianteEscuelaModel> AlumnoEscuelas { get; set; }
-            public DbSet<ProfesorEstudianteModel> ProfesorAlumnos { get; set; }
+            public DbSet<EstudianteEscuelaModel> EstudianteEscuelas { get; set; }
+            public DbSet<ProfesorEstudianteModel> ProfesorEstudiante { get; set; }
     }
 }

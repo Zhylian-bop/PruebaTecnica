@@ -16,10 +16,10 @@ namespace PruebaTecnica.Controllers
         }
         //POST
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] EstudianteDTO dto)
+        public async Task<IActionResult> Create(string nombre,string apellido,DateTime fechaNacimiento)
         {
             try {
-                await _estudianteService.AddAsync(dto.Nombre, dto.Apellido, dto.FechaNacimiento);
+                await _estudianteService.AddAsync(nombre, apellido, fechaNacimiento);
                 return Ok("Estudiante creado correctamente.");
             } catch(Exception ex) { 
                 return StatusCode(StatusCodes.Status500InternalServerError, $"Error al crear el estudiante: {ex.Message}");
@@ -59,11 +59,11 @@ namespace PruebaTecnica.Controllers
         }
         //PUT
         [HttpPut("{id:int}")]
-        public async Task<IActionResult> Update(int id, [FromBody] EstudianteDTO dto)
+        public async Task<IActionResult> Update(int id, string nombre, string apellido, DateTime fechaNacimiento,bool activo)
         {
             try
             {
-                var result = await _estudianteService.UpdateAsync(id, dto.Nombre, dto.Apellido, dto.FechaNacimiento, dto.Activo);
+                var result = await _estudianteService.UpdateAsync(id, nombre, apellido, fechaNacimiento, activo);
                 return Ok("Estudiante actualizado correctamente.");
             }
             catch (Exception ex)

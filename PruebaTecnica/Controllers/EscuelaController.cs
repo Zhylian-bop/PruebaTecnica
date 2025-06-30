@@ -16,8 +16,8 @@ namespace PruebaTecnica.Controllers
         }
         //POST
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] EscuelaDTO dto) { 
-            await _escuelaService.AddAsync(dto.Nombre, dto.Descripcion);
+        public async Task<IActionResult> AddAsync(string nombre,string descripcion) { 
+            await _escuelaService.AddAsync(nombre,descripcion);
             return Ok("Escuela creada correctamente.");
         }
 
@@ -55,11 +55,11 @@ namespace PruebaTecnica.Controllers
         }
         //PUT
         [HttpPut("{id:int}")]
-        public async Task<IActionResult> Update(int id, [FromBody] EscuelaDTO dto)
+        public async Task<IActionResult> Update(int id, string nombre,string descripcion,bool activo)
         {
             try
             {
-                var updatedEscuela = await _escuelaService.UpdateAsync(id, dto.Nombre, dto.Descripcion, dto.Activo);
+                var updatedEscuela = await _escuelaService.UpdateAsync(id, nombre, descripcion,activo);
                 if (updatedEscuela == null)
                 {
                     return NotFound($"Escuela con ID {id} no encontrada.");

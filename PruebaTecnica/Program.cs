@@ -20,6 +20,7 @@ builder.Services.AddAutoMapper(typeof(MapeoProfile));
 builder.Services.AddScoped<IEscuelaService, EscuelaService>();
 builder.Services.AddScoped<IEstudianteService, EstudianteService>();
 builder.Services.AddScoped<IProfesorService, ProfesorService>();
+builder.Services.AddScoped<IEstudianteEscuelaService, EstudianteEscuelaService>();
 
 var app = builder.Build();
 
