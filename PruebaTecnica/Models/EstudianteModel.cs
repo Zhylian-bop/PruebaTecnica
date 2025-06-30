@@ -7,7 +7,7 @@
         public string Apellido { get; set; } = string.Empty;
         public DateTime FechaNacimiento { get; set; }
         // Relaciones
-        public IEnumerable<ProfesorAlumnoModel> ProfesorAlumnos { get; set; }
-        public IEnumerable<AlumnoEscuelaModel> AlumnoEscuelas { get; set; }
+        public IEnumerable<ProfesorEstudianteModel> ProfesorAlumnos { get; set; }
+        public IEnumerable<EstudianteEscuelaModel> AlumnoEscuelas { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace PruebaTecnica.Models
 {
-    public class AlumnoEscuelaModel:RegistroModel
+    public class EstudianteEscuelaModel:RegistroModel
     {
         public int Id { get; set; }
         public int IdEstudiante { get; set; }
