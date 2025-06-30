@@ -2,7 +2,7 @@
 
 namespace PruebaTecnica.DTOs
 {
-    public class EstudianteDTO
+    public class EstudianteDTO :RegistroDTO
     {
         public int Id { get; set; }
         [Required(ErrorMessage = "El nombre es obligatorio.")]

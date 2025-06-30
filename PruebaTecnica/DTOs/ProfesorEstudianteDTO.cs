@@ -2,7 +2,7 @@
 
 namespace PruebaTecnica.DTOs
 {
-    public class ProfesorEstudianteDTO
+    public class ProfesorEstudianteDTO:RegistroDTO
     {
         public int Id { get; set; }
         [Required(ErrorMessage = "El campo 'IdProfesor' es obligatorio.")]
