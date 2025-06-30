@@ -6,7 +6,7 @@ using PruebaTecnica.Services.Servicios;
 
 namespace PruebaTecnica.Services.Interfaces
 {
-    public class EscuelaService : IEscuelaService
+    public class EscuelaService :  IEscuelaService
     {
         private readonly ApplicationDbContext _context;
         private readonly IMapper _mapper;

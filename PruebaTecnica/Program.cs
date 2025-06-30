@@ -19,6 +19,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(typeof(MapeoProfile));
 builder.Services.AddScoped<IEscuelaService, EscuelaService>();
 builder.Services.AddScoped<IEstudianteService, EstudianteService>();
+builder.Services.AddScoped<IProfesorService, ProfesorService>();
 
 var app = builder.Build();
 
