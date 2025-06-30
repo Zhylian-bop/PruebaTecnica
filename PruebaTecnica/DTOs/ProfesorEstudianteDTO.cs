@@ -6,8 +6,8 @@ namespace PruebaTecnica.DTOs
     {
         public int Id { get; set; }
         [Required(ErrorMessage = "El campo 'IdProfesor' es obligatorio.")]
-        public int IdProfesor { get; set; }
+        public int ProfesorId { get; set; }
         [Required(ErrorMessage = "El campo 'IdEstudiante' es obligatorio.")]
-        public int IdEstudiante { get; set; }
+        public int EstudianteId { get; set; }
     }
 }
