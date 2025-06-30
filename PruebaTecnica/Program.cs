@@ -21,6 +21,7 @@ builder.Services.AddScoped<IEscuelaService, EscuelaService>();
 builder.Services.AddScoped<IEstudianteService, EstudianteService>();
 builder.Services.AddScoped<IProfesorService, ProfesorService>();
 builder.Services.AddScoped<IEstudianteEscuelaService, EstudianteEscuelaService>();
+builder.Services.AddScoped<IProfesorEstudianteService, ProfesorEstudianteService>();
 
 var app = builder.Build();
 
